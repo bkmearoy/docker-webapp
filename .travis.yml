@@ -12,4 +12,4 @@ before_install:
   - docker build -t bkmearoy/docker-webapp -f Dockerfile.dev .
 
 script:
-  - docker run bkmearoy/docker-webapp npm run test -- --coverage
+  - docker run -e CI=true bkmearoy/docker-webapp npm run test
